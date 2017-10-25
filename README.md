@@ -7,3 +7,5 @@ Add 3d graphics
   moves counter, time
   animate the turns
 Solve button
+High scores
+	database
