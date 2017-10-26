@@ -1,8 +1,6 @@
 clockwise = [6, 3, 0, 7, 4, 1, 8, 5, 2]
 counterClockwise = [2, 5, 8, 1, 4, 7, 0, 3, 6]
 
-test
-
 class Cube:
 	
 	def __init__(self):
