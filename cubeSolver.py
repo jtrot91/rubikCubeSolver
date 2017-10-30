@@ -86,12 +86,64 @@ class Cube:
 			
 		for x in range(0,9):
 			self.front[x] = tempFront[counterClockwise[x]]	
-	'''def leftTurn(self):
+	def leftTurn(self):
+		top 0 > front 0 > bottom 0 > back 8
+		top 3 > front 3 > bottom 3 > right 5
+		top 6 > front 6 > bottom 6 > right 2
 	def leftTurnPrime(self):
+		top 0 > front 0 > bottom 0 > back 8
+		top 3 > front 3 > bottom 3 > right 5
+		top 6 > front 6 > bottom 6 > right 2
 	def rightTurn(self):
-	def rightTurnPrime(self):'''
+	def rightTurnPrime(self):
 	def backTurn(self):
+		tempBack = self.back[:]
+		tempTop = self.top[:]
+		tempLeft = self.left[:]
+		tempBottom = self.bottom[:]
+		tempRight = self.right[:]			
+		
+		self.top[0] = tempRight[2]
+		self.left[6] = tempTop[0]
+		self.bottom[8] = tempLeft[6]
+		self.right[2] = tempBottom[8]
+		
+		self.top[1] = tempRight[5]
+		self.left[3] = tempTop[1]
+		self.bottom[7] = tempLeft[3]
+		self.right[5] = tempBottom[7]
+		
+		self.top[2] = tempRight[8]
+		self.left[0] = tempTop[2]
+		self.bottom[6] = tempLeft[0]
+		self.right[8] = tempBottom[6]
+			
+		for x in range(0,9):
+			self.back[x] = tempBack[clockwise[x]]
 	def backTurnPrime(self):
+		tempBack = self.back[:]
+		tempTop = self.top[:]
+		tempLeft = self.left[:]
+		tempBottom = self.bottom[:]
+		tempRight = self.right[:]			
+		
+		self.top[0] = tempLeft[6]
+		self.left[6] = tempBottom[8]
+		self.bottom[8] = tempRight[2]
+		self.right[2] = tempTop[0]
+		
+		self.top[1] = tempLeft[3]
+		self.left[3] = tempBottom[7]
+		self.bottom[7] = tempRight[5]
+		self.right[5] = tempTop[1]
+		
+		self.top[2] = tempLeft[0]
+		self.left[0] = tempBottom[6]
+		self.bottom[6] = tempRight[8]
+		self.right[8] = tempTop[2]
+		
+		for x in range(0,9):
+			self.back[x] = tempBack[counterClockwise[x]]
 	def topTurn(self):
 		tempTop = self.top[:]
 		tempFront = self.front[:]
